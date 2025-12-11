@@ -5,6 +5,7 @@ import { fetchFiveDayForecast } from './services/weather';
 /**
  * Main App component for Clothes Dry Alert
  * Handles geolocation, weather fetching, and UI rendering
+ * This component manages all application state and user interactions
  */
 function App() {
   // State management
