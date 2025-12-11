@@ -1,6 +1,7 @@
 /**
  * Weather service module
  * Separates API logic from UI components for better testability and maintainability
+ * This module handles all interactions with the OpenWeatherMap API
  */
 
 // Placeholder API key - in production, use environment variables
