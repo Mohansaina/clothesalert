@@ -1,0 +1,166 @@
+/* Global styles and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App container */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Alert section */
+.alert-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.alert {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alert.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.alert.safe {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Loading and error states */
+.loading, .error {
+  padding: 20px;
+  text-align: center;
+}
+
+.error p {
+  margin-bottom: 15px;
+  color: #721c24;
+}
+
+/* Button styles */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+/* Forecast section */
+.forecast-section {
+  margin-top: 30px;
+}
+
+.forecast-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.weather-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Weather card component */
+.weather-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.weather-time {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
+
+.weather-temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.weather-description {
+  text-transform: capitalize;
+  color: #7f8c8d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .weather-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .alert {
+    font-size: 1rem;
+  }
+}
